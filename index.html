@@ -85,6 +85,8 @@ usage: muta.jar
  -t <span class="pl-k">&lt;</span>TemplateName<span class="pl-k">&gt;</span>   Specify the template to mutate.
  -c <span class="pl-k">&lt;</span>configFile<span class="pl-k">&gt;</span>     Load configuration from config file.</pre></div>
 
+<p>MutaOps is a comma separated list and can be any combination of the following items: <em>WidenTimeGuardStrategy</em>, <em>ShiftTimeGuardStrategy</em>, <em>RestrictTimeGuardStrategy</em> and <em>SelfLoopStrategy</em>.</p>
+
 <ul>
 <li><p>Secondly, <em>vmodels.jar</em> translates generated test cases into sequential timed automata by following the approach described in [3], and embedded them into each generated mutants from the previous step. The generated models which composed by sequential timed automata (test cases) and mutated timeliness test model (faulty implementations) are called "verification model", <em>vmodel</em> for short. </p></li>
 <li><p>Finally, each vmodel file is verified by <em>verifier.jar</em>, which verifies each test case in test suite against each mutant. A mutant was killed by the test suite when at least one test case failed.</p></li>
