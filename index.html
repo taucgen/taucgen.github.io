@@ -70,8 +70,14 @@ usage: taucGen.jar
 <h4>
 <a id="evaluation" class="anchor" href="#evaluation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Evaluation</h4>
 
-<p>Evaluation Module contains several components: Firstly <em>muta.jar</em> was used to automatically mutate Timeliness test model by a subset of mutation operators suggested in [1][2] that may impact timing requirements. This allow the generation of mutants that represent faulty implementations of system. Secondly, <em>vmodels.jar</em> translates generated test cases into sequential timed automata by following the approach described in [3], and embedded them into each generated mutants from the previous step. The generated models which composed by sequential timed automata (test cases) and mutated timeliness test model (faulty implementations) are called "verification model", <em>vmodel</em> for short. Finally, each vmodel file is verified by <em>verifier.jar</em>, which verifies each test case in test suite against each mutant. A mutant was killed by the test suite when at least one test case failed.
-muta.jar</p>
+<p>Evaluation Module contains several components: </p>
+
+<ul>
+<li>Firstly <em>muta.jar</em> was used to automatically mutate Timeliness test model by a subset of mutation operators suggested in [1][2], which may impact timing requirements. This allow the generation of mutants that represent faulty implementations of system. </li>
+<li>Secondly, <em>vmodels.jar</em> translates generated test cases into sequential timed automata by following the approach described in [3], and embedded them into each generated mutants from the previous step. The generated models which composed by sequential timed automata (test cases) and mutated timeliness test model (faulty implementations) are called "verification model", <em>vmodel</em> for short. </li>
+<li>Finally, each vmodel file is verified by <em>verifier.jar</em>, which verifies each test case in test suite against each mutant. A mutant was killed by the test suite when at least one test case failed.
+muta.jar</li>
+</ul>
 
 <h4>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h4>
