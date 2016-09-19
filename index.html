@@ -55,8 +55,8 @@
 <div class="highlight highlight-source-batchfile"><pre>~$ java -jar taucGen.jar 
 usage: taucGen.jar
  -i <span class="pl-k">&lt;</span>InputModels<span class="pl-k">&gt;</span>         File/Folder contains Timeliness Model.
- -o <span class="pl-k">&lt;</span>PathForTestSuite<span class="pl-k">&gt;</span>     Specify the place to save test suite.
- -t <span class="pl-k">&lt;</span>PathForTrace<span class="pl-k">&gt;</span>        Specify the place to save traces.
+ -o <span class="pl-k">&lt;</span>PathForTestSuite<span class="pl-k">&gt;</span>    Specify the <span class="pl-k">path</span> to save test suite.
+ -t <span class="pl-k">&lt;</span>PathForTrace<span class="pl-k">&gt;</span>        Specify the <span class="pl-k">path</span> to save traces.
  -m <span class="pl-k">&lt;</span>NumberOfIteration<span class="pl-k">&gt;</span>   Specify number of Iteration.
  -n <span class="pl-k">&lt;</span>SizeOfTestSuite<span class="pl-k">&gt;</span>     Size of generated test suite.
  -r                       Random test generation strategy instead TAUC.</pre></div>
@@ -80,7 +80,7 @@ usage: taucGen.jar
 usage: muta.jar
  -f <span class="pl-k">&lt;</span>ModelFile<span class="pl-k">&gt;</span>      Timeliness model file to mutate.
  -m <span class="pl-k">&lt;</span>MutaOps<span class="pl-k">&gt;</span>        List of mutation operators.
- -o <span class="pl-k">&lt;</span>PathForMutants<span class="pl-k">&gt;</span> Output <span class="pl-k">path</span> where store generated mutants.
+ -o <span class="pl-k">&lt;</span>PathForMutants<span class="pl-k">&gt;</span> Specify the <span class="pl-k">path</span> to save generated mutants.
  -s <span class="pl-k">&lt;</span>OffsetValue<span class="pl-k">&gt;</span>    Required <span class="pl-k">for</span> widen|<span class="pl-k">shift</span>|restrict MutaOps.
  -t <span class="pl-k">&lt;</span>TemplateName<span class="pl-k">&gt;</span>   Specify the template to mutate.
  -c <span class="pl-k">&lt;</span>configFile<span class="pl-k">&gt;</span>     Load configuration from config file.</pre></div>
@@ -90,8 +90,16 @@ usage: muta.jar
 <p>Configuration can be loaded from a config file instead of command-line arguments. Once config file is specified by <em>-c</em>, other command-line arguments will be ignored. Here is a example of <a href="">config file</a>.</p>
 
 <ul>
-<li><p>Secondly, <strong><em>vmodels.jar</em></strong> translates generated test cases into sequential timed automata by following the approach described in [3], and embedded them into each generated mutants from the previous step. The generated models which composed by sequential timed automata (test cases) and mutated timeliness test model (faulty implementations) are called "verification model", <em>vmodel</em> for short. </p></li>
-<li><p>Finally, each vmodel file is verified by <strong><em>verifier.jar</em></strong>, which verifies each test case in test suite against each mutant. A mutant was killed by the test suite when at least one test case failed.</p></li>
+<li>Secondly, <strong><em>vmodels.jar</em></strong> translates generated test cases into sequential timed automata by following the approach described in [3], and embedded them into each generated mutants from the previous step. The generated models which composed by sequential timed automata (test cases) and mutated timeliness test model (faulty implementations) are called "verification model", <em>vmodel</em> for short. </li>
+</ul>
+
+<div class="highlight highlight-source-batchfile"><pre>~$ java -jar vmodel.jar
+usage: vmodel.jar
+ -i <span class="pl-k">&lt;</span>Mutants<span class="pl-k">&gt;</span>       File/Folder contains mutants.
+ -o <span class="pl-k">&lt;</span>PathForVModel<span class="pl-k">&gt;</span> Specify the <span class="pl-k">path</span> to save vmodels.</pre></div>
+
+<ul>
+<li>Finally, each vmodel file is verified by <strong><em>verifier.jar</em></strong>, which verifies each test case in test suite against each mutant. A mutant was killed by the test suite when at least one test case failed.</li>
 </ul>
 
 <h4>
