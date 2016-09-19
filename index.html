@@ -74,9 +74,20 @@ usage: taucGen.jar
 
 <ul>
 <li>Firstly <em>muta.jar</em> was used to automatically mutate Timeliness test model by a subset of mutation operators suggested in [1][2], which may impact timing requirements. This allow the generation of mutants that represent faulty implementations of system. </li>
-<li>Secondly, <em>vmodels.jar</em> translates generated test cases into sequential timed automata by following the approach described in [3], and embedded them into each generated mutants from the previous step. The generated models which composed by sequential timed automata (test cases) and mutated timeliness test model (faulty implementations) are called "verification model", <em>vmodel</em> for short. </li>
-<li>Finally, each vmodel file is verified by <em>verifier.jar</em>, which verifies each test case in test suite against each mutant. A mutant was killed by the test suite when at least one test case failed.
-muta.jar</li>
+</ul>
+
+<div class="highlight highlight-source-batchfile"><pre>~$ java -jar muta.jar 
+usage: muta.jar
+ -c <span class="pl-k">&lt;</span>configFile<span class="pl-k">&gt;</span>     Config file.
+ -f <span class="pl-k">&lt;</span>modelFile<span class="pl-k">&gt;</span>      Uppaal model file to mutate.
+ -m <span class="pl-k">&lt;</span>mutants<span class="pl-k">&gt;</span>        List of mutation operators.
+ -o <span class="pl-k">&lt;</span>outputPath<span class="pl-k">&gt;</span>     Output <span class="pl-k">path</span> where store generated mutants.
+ -s <span class="pl-k">&lt;</span>offset<span class="pl-k">&gt;</span>         Value to <span class="pl-k">shift</span>.
+ -t <span class="pl-k">&lt;</span>templateName<span class="pl-k">&gt;</span>   Template to mutate.</pre></div>
+
+<ul>
+<li><p>Secondly, <em>vmodels.jar</em> translates generated test cases into sequential timed automata by following the approach described in [3], and embedded them into each generated mutants from the previous step. The generated models which composed by sequential timed automata (test cases) and mutated timeliness test model (faulty implementations) are called "verification model", <em>vmodel</em> for short. </p></li>
+<li><p>Finally, each vmodel file is verified by <em>verifier.jar</em>, which verifies each test case in test suite against each mutant. A mutant was killed by the test suite when at least one test case failed.</p></li>
 </ul>
 
 <h4>
