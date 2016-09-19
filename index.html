@@ -61,7 +61,9 @@ usage: taucGen.jar
  -n <span class="pl-k">&lt;</span>SizeOfTestSuite<span class="pl-k">&gt;</span>     Size of generated test suite.
  -r                       Random test generation strategy instead TAUC.</pre></div>
 
-<p>The <em>lib</em> folder contains all the dependencies, thus it should be placed in the same folder with taucGen.jar.</p>
+<p>The <strong>lib</strong> folder contains all the dependencies, thus it should be placed in the same folder with taucGen.jar. Otherwise, use the following way to run:</p>
+
+<div class="highlight highlight-source-batchfile"><pre>~$ java -cp <span class="pl-s">'taucGen.jar:&lt;Absolute Path for lib&gt;/*'</span> org.snt.svv.tauc.testgen.Main</pre></div>
 
 <h4>
 <a id="evaluation" class="anchor" href="#evaluation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Evaluation</h4>
