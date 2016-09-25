@@ -60,7 +60,8 @@ usage: taucGen.jar
  -t <span class="pl-k">&lt;</span>PathForTrace<span class="pl-k">&gt;</span>        Specify the <span class="pl-k">path</span> to save traces.
  -m <span class="pl-k">&lt;</span>NumberOfIteration<span class="pl-k">&gt;</span>   Specify number of Iteration.
  -n <span class="pl-k">&lt;</span>SizeOfTestSuite<span class="pl-k">&gt;</span>     Size of generated test suite.
- -r                       Random test generation strategy instead TAUC.</pre></div>
+ -r                       Random test generation strategy instead TAUC.
+ -p                       <span class="pl-k">Print</span> test generation statistics.</pre></div>
 
 <p>The <strong>lib</strong> folder contains all the dependencies, thus it should be placed under the same folder with taucGen.jar. Otherwise, use the following way to run:</p>
 
@@ -100,11 +101,11 @@ usage: java -jar vmodel.jar
  -i <span class="pl-k">&lt;</span>Mutants<span class="pl-k">&gt;</span>       File/Folder contains mutants.
  -o <span class="pl-k">&lt;</span>PathForVModel<span class="pl-k">&gt;</span> Specify the <span class="pl-k">path</span> to save vmodels.</pre></div>
 
-<p>By default, <strong><em>vmodels.jar</em></strong> execute and translate test cases dynamically by using Java Reflection, thus test case folder was required in classpath. This also requires generated test cases have been compiled by the following command.</p>
+<p>By default, <strong><em>vmodels.jar</em></strong> execute and translate test cases dynamically by using Java Reflection, thus test case folder was required in command line argument. This also requires generated test cases have been compiled based on a adaptor library by the following command.</p>
 
 <div class="highlight highlight-source-batchfile"><pre>~$ javac -cp uppaal-test-adaptor.jar <span class="pl-k">&lt;</span>PathOfTestCases<span class="pl-k">&gt;</span>/*.java</pre></div>
 
-<p>For convenience, please use the provided batch script <em>createVModel.sh</em>.</p>
+<p>For convenience, please use the provided batch script <em>createVModel.sh</em>, which will first compile the test cases and then create VModels.</p>
 
 <div class="highlight highlight-source-batchfile"><pre>~$ createVModel.sh
 Usage: 
@@ -116,8 +117,12 @@ Usage:
 
 <div class="highlight highlight-source-batchfile"><pre>~$ java -jar verifier.jar
 usage: verifier.jar
- -f <span class="pl-k">&lt;</span>VModels<span class="pl-k">&gt;</span>      VModel file/folder to <span class="pl-k">verify</span>.
- -p <span class="pl-k">&lt;</span>TC-Prefix<span class="pl-k">&gt;</span>    Prefix <span class="pl-k">for</span> the name of test case templates.</pre></div>
+ -i <span class="pl-k">&lt;</span>VModels<span class="pl-k">&gt;</span>     VModel file/folder to <span class="pl-k">verify</span>.
+ -p <span class="pl-k">&lt;</span>TC-Prefix<span class="pl-k">&gt;</span>   Prefix <span class="pl-k">for</span> the name of test case templates.
+ -f               Fast verification(stop when first killed).
+ -s               <span class="pl-k">Print</span> verification Statistics.</pre></div>
+
+<p>The command-line arguments <em>-p</em> indicates the prefix for the name of test case templates. Conventionally, each test case was translated into a sequential timed automata and named as test0, test1, test2, ... etc. Thus, here the prefix is <em>test</em>.</p>
 
 <h4>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h4>
