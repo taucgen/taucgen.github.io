@@ -1,0 +1,31 @@
+{
+  "MutaOps":["SelfLoopStrategy", "WidenTimeGuardStrategy", "ShiftTimeGuardStrategy"],
+  "OffsetValue":400,
+  "PathForMutants":"./mutants",
+  "Models": [
+    {"File":"../Artifacts/Original/BuildCheckError/BuildCheckError.xml", "TemplateName":"BuildCheckError"},
+    {"File":"../Artifacts/Original/BuildCheckNotRunError/BuildCheckNotRunError.xml", "TemplateName":"BuildCheckNotRunError"},
+    {"File":"../Artifacts/Original/CableShieldError/CableShieldError.xml", "TemplateName":"CableShieldError"},
+    {"File":"../Artifacts/Original/CalibrationDataError/CalibrationDataError.xml", "TemplateName":"CalibrationDataError"},
+    {"File":"../Artifacts/Original/CalibrationNotLearnedError/CalibrationNotLearnedError.xml", "TemplateName":"CalibrationNotLearnedError"},
+    {"File":"../Artifacts/Original/DiscardError/DiscardError.xml", "TemplateName":"DiscardError"},
+    {"File":"../Artifacts/Original/InternalMeasurementPathError/InternalMeasurementPathError.xml", "TemplateName":"InternalMeasurementPathError"},
+    {"File":"../Artifacts/Original/TaskModel/BodySenseIII.xml", "TemplateName":"LINInterruptHandler"},
+    {"File":"../Artifacts/Original/MeasurementRangeError/MeasurementRangeError.xml", "TemplateName":"MeasurementRangeError"},
+    {"File":"../Artifacts/Original/MeasurementSensePathError/MeasurementSensePathError.xml", "TemplateName":"MeasurementSensePathError"},
+    {"File":"../Artifacts/Original/NVMAccessError/NVMAccessError.xml", "TemplateName":"NVMAccessError"},
+    {"File":"../Artifacts/Original/NVMCRCError/NVMCRCError.xml", "TemplateName":"NVMCRCError"},
+    {"File":"../Artifacts/Original/RAMError/RAMError.xml", "TemplateName":"RAMError"},
+    {"File":"../Artifacts/Original/ROMError/ROMError.xml", "TemplateName":"ROMError"},
+    {"File":"../Artifacts/Original/SeatFrameConnectionError/SeatFrameConnectionError.xml", "TemplateName":"SeatFrameConnectionError"},
+    {"File":"../Artifacts/Original/SeatHeaterCircuitIntegrityError/SeatHeaterCircuitIntegrityError.xml", "TemplateName":"SeatHeaterCircuitIntegrityError"},
+    {"File":"../Artifacts/Original/ShortToUbatGndError/ShortToUbatGndError.xml", "TemplateName":"ShortToUbatGndError"},
+    {"File":"../Artifacts/Original/TaskModel/BodySenseIII.xml", "TemplateName":"taskAM"},
+    {"File":"../Artifacts/Original/TemperatureRangeError/TemperatureRangeError.xml", "TemplateName":"TemperatureRangeError"},
+    {"File":"../Artifacts/Original/TemperatureRangeLimitError/TemperatureRangeLimitError.xml", "TemplateName":"TemperatureRangeLimitError"},
+    {"File":"../Artifacts/Original/TemperatureSensorError/TemperatureSensorError.xml", "TemplateName":"TemperatureSensorError"},
+    {"File":"../Artifacts/Original/VoltageHighError/VoltageHighError.xml", "TemplateName":"VoltageHighError"},
+    {"File":"../Artifacts/Original/VoltageLowError/VoltageLowError.xml", "TemplateName":"VoltageLowError"},
+    {"File":"../Artifacts/Original/WatchdogResetError/WatchdogResetError.xml", "TemplateName":"WatchdogResetError"}
+    ]
+}
